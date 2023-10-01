@@ -1,12 +1,9 @@
 package pages;
 
 import base.Base;
-import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import support.DataFactory;
 import support.Utilities;
-
-import java.util.Random;
 
 public class RegistrationPage extends Base {
 
@@ -44,7 +41,10 @@ public class RegistrationPage extends Base {
         util.getWebElement(confirmPasswordField).sendKeys(data.password);
     }
 
-    public WelcomePage submitRegistrationForm(){
+    public WelcomePage submitRegistrationForm() {
+
+        System.out.println("[i] Attempting registration with Username: "
+                + data.userName + " & Password: " + data.password);
 
         util.getWebElement(registerButton).click();
 

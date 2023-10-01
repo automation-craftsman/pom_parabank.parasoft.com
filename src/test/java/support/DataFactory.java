@@ -1,14 +1,13 @@
 package support;
 
 import com.github.javafaker.Faker;
-import com.github.javafaker.PhoneNumber;
 
 import java.util.Locale;
 import java.util.Random;
 
 public class DataFactory {
 
-    Faker faker = new Faker(new Locale("en-US"), new Random(200));
+    Faker faker = new Faker(new Locale("en-US"), new Random(101));
 
     public String firstName = faker.name().firstName();
     public String lastName = faker.name().lastName();
@@ -21,6 +20,5 @@ public class DataFactory {
     public String userName = firstName + "_" + lastName;
     public String password = faker.internet().
             password(6, 14, true, true);
-
 
 }

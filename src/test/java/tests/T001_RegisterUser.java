@@ -9,13 +9,16 @@ import pages.WelcomePage;
 
 public class T001_RegisterUser extends Base {
 
+    LoginPage loginPage;
+    WelcomePage welcomePage;
+
     @Test
-    public void registerUser(){
-        LoginPage loginPage = new LoginPage();
+    public void registerUser() {
+        loginPage = new LoginPage();
         RegistrationPage registrationPage = loginPage.clickOnRegistrationLink();
 
         registrationPage.fillOutRegistrationForm();
-        WelcomePage welcomePage = registrationPage.submitRegistrationForm();
+        welcomePage = registrationPage.submitRegistrationForm();
 
         String accountConfirmationText = welcomePage.getWelcomeText();
 

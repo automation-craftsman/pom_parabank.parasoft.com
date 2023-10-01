@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Master Test Suite">
-    <test verbose="2" preserve-order="true" name="D:/SQA/webdriver_java/pom_parabank.parasoft.com">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="pom_parabank.parasoft.com">
         <classes>
             <class name="tests.T001_RegisterUser">
                 <methods>
                     <include name="registerUser"/>
+                </methods>
+            </class>
+            <class name="tests.T003_LogoutUser">
+                <methods>
+                    <include name="logoutUser"/>
                 </methods>
             </class>
             <class name="tests.T002_LoginUser">

@@ -11,6 +11,8 @@ import org.testng.annotations.BeforeSuite;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
 public class Base {
@@ -42,8 +44,13 @@ public class Base {
      */
     private static WebDriver launchBrowser(String browserName){
 
-        // Reference browser options object for future development
+//        Map<String, Object> prefs = new HashMap<String, Object>();
+//        prefs.put("profile.default_content_setting_values.notifications", 2);
+//
         ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.setExperimentalOption("prefs", prefs);
+
+        // Reference browser options object for future development
         FirefoxOptions firefoxOptions = new FirefoxOptions();
 
         if (browserName.equalsIgnoreCase("Chrome")){
